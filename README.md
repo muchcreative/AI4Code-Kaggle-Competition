@@ -14,7 +14,7 @@ Personal Model was a Triple Ensemble Model using 2x GraphCodeBert's and a XLM-Ro
     - Second stage would identify its exact location wtihin the quadrant
 2. Pseudo combination of a pairwise and pointwise model. Each markdown would be processed seperately for the document and given a random selection of code cells. Each markdwon will be run with 3 different random samples and its final pointwise location will be averaged amongst its runs
 3. Generate markdown specific embeddings and rank them accordingly to each other then ensemble this with the pseudo combination model above
-4. Use previous layer outputs in the transformer model to stich together more richly defined embeddings using information gained from previous hidden states
+4. Use previous layer outputs in the transformer model to stich together more richly defined embeddings using information gained from previous hidden states with mean and max pooling
 5. Manually gathered external datasets online and used a Selenium Driver to webscrap additional open source Kaggle notebooks and Juypter ML-based notebooks
 
 **What the highest ranked ML models used:**
