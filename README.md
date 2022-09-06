@@ -1,19 +1,21 @@
 # GCodeComp Kaggle Trial
 
-NLP Kaggle 3-Month Competition [Found Here](https://www.kaggle.com/competitions/AI4Code/overview]). Selected Model was a Triple Ensemble Model using 2x GraphCodeBert's and a XLM-Roberta-Base. Built using Tensorflow to utilize TFRecords and TPU speed. Model is a subclassed structure that aims to combine cell and document embeddings to predict document (cell) order of a python notebook. Code cells are given in correct order but the markdown cells are scrambled within the given notebooks. Most cell outputs in this repository have been deleted to save space on my Google Drive for other work.
+NLP Kaggle 3-Month Competition [Found Here](https://www.kaggle.com/competitions/AI4Code/overview]). Goal was to predict document (cell) order of a python notebook. Code cells are given in correct order but the markdown cells are scrambled within the given notebooks. Most cell outputs in this repository have been deleted to save space on my Google Drive for other work.
+
+Personal Model was a Triple Ensemble Model using 2x GraphCodeBert's and a XLM-Roberta-Base with random code cell sampling to create document embeddings. Built using Tensorflow to utilize TFRecords and TPU speed. Model is a subclassed structure that aims to combine cell and document embeddings to generate the correct order of the markdown cells.
 
 **Final Score:**
 - 86-87 Kendall Tau Score, however peronsal test environment and dataset was around 88-89.
 - Winning scores ranged between 90-92 Kendall Tau
 
 **Ideas Tested:**
-- Two-stage prediction model:
+1. Two-stage prediction model:
   - First stage would split the document into 4 parts and identify the quadrant that the markdown was located in
   - Second stage would identify its exact location wtihin the quadrant
-- Pseudo combination of a pairwise and pointwise model. Each markdown would be processed seperately for the document and given a random selection of code cells. Each markdwon will be run with 3 different random samples and its pointwise location will be averaged amongst runs
-- Generate markdown specific embeddings and rank them accordingly to each other then ensemble this with the pseudo combination model above
-- Use previous layer outputs in the transformer model to stich together more richly defined embeddings using information gained from previous hidden states
-- Manually gathered external datasets online and used a Selenium Driver to webscrap additional open source Kaggle notebooks and Juypter ML-based notebooks
+2. Pseudo combination of a pairwise and pointwise model. Each markdown would be processed seperately for the document and given a random selection of code cells. Each markdwon will be run with 3 different random samples and its pointwise location will be averaged amongst runs
+3. Generate markdown specific embeddings and rank them accordingly to each other then ensemble this with the pseudo combination model above
+4. Use previous layer outputs in the transformer model to stich together more richly defined embeddings using information gained from previous hidden states
+5. Manually gathered external datasets online and used a Selenium Driver to webscrap additional open source Kaggle notebooks and Juypter ML-based notebooks
 
 **What the highest ranked ML models used:**
 - Additional attention layers performed much better than dense layers on combining embeddings and contexts together
