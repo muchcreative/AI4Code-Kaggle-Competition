@@ -25,7 +25,7 @@ Personal Model was a Triple Ensemble Model using 2x GraphCodeBert's and a XLM-Ro
 
 **Thoughts:**
 - Lost 1 month chasing a failed idea. Initial idea for a two-stage model was subject to conditional probabliltiy if the model is not trained as a whole. For instance having 90% accuracy to get the correct quadrant location followed by a 92% accuracy to get the correct location within that quadrant would result in less than ~82% chance of the markdown being in the correct location at the end. The model must generate a correct markdown location with one run or stage.
-- Due to the nature of the scoring metric, larger documents had considerably more weight in the final score than smaller documents. When conducting random sampling on larger documents, they produced poor code / document embeddings as the cells were more sparse and containted less significant information to create a comprehensive embedding for the document.
+- Due to the nature of the scoring metric (Kendall Tau), larger documents had considerably more weight in the final score than smaller documents. When conducting random sampling on larger documents, they produced poor code / document embeddings as the cells were more sparse and containted less significant information to create a comprehensive embedding for the document.
 - Missed on an option to use a GDBT to help balance out the ensemble outputs
 - Utilized a combination of a pairwise / pointwise approach. Should have tried harder to conceive a strong listwise approach which in-turn would improve model training speed.
 - Debarta V2 and Debarta V3 were stronger language models that should have been considered.
