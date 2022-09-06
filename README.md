@@ -1,14 +1,16 @@
 # GCodeComp Kaggle Trial
 
-NLP Kaggle Competition [Found Here]( https://www.kaggle.com/competitions/AI4Code/overview]). Final Model was a Triple Ensemble Model using 2x GraphCodeBert's and a XLM-Roberta-Base. Split the representations between single line and document embeddings.
+NLP Kaggle 3-Month Competition [Found Here]( https://www.kaggle.com/competitions/AI4Code/overview]). Selected Model was a Triple Ensemble Model using 2x GraphCodeBert's and a XLM-Roberta-Base. Built using Tensorflow to utilize TFRecords and TPU speed. Model is a subclassed structure that aims to combine cell and document embeddings to predict document (cell) order of a python notebook. Code cells are given in correct order but the markdown cells are scrambled within the given notebooks.
 
-Idea:
+Ideas Tested:
 - 
+
 
 Problems:
 - 
 
 For Next Time on NLP problems:
+- Less HypOp tuning, better to compare against
 - Need to be better probably will swap to Pytorch when dealing with NLP models, less, however TPU training with TFRecords proved to be quite faster than V100 and T4 GPUs with XLA optimization.
 - Still lack experience, should push harder for results and faster benchmarking.
 - Using Debarta
