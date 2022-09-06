@@ -24,7 +24,6 @@ Personal Model was a Triple Ensemble Model using 2x GraphCodeBert's and a XLM-Ro
 - Model structures were better tailored for the problem to include better inductive biases for the problem. For insance, unique cell embeddings were used for each cell along with concatenations of transformed categorical features to match the dimension space of the new embedding.
 
 **Thoughts:**
-- Weak performance
 - Lost 1 month chasing a failed idea. Initial idea for a two-stage model was subject to conditional probabliltiy if the model is not trained as a whole. For instance having 90% accuracy to get the correct quadrant location followed by a 92% accuracy to get the correct location within that quadrant would result in less than ~82% chance of the markdown being in the correct location at the end. The model must generate a correct markdown location with one run or stage.
 - Due to the nature of the scoring metric, larger documents had considerably more weight in the final score than smaller documents. When conducting random sampling on larger documents, they produced poor code / document embeddings as the cells were more sparse and containted less significant information to create a comprehensive embedding for the document.
 - Missed on an option to use a GDBT to help balance out the ensemble outputs
@@ -35,3 +34,4 @@ Personal Model was a Triple Ensemble Model using 2x GraphCodeBert's and a XLM-Ro
 - External dataset did not provide as much boost as I was hoping for as different time periods of notebook creations ended up adding noise to the main train dataset
 -  Wasn’t able to extract information from a markdown embedding due to FCL usage over attention layers
 -	Too much time was spent on EDA and post-language processing, NLPs seem to prefer better model structures and good feature representation over preprocessing techniques.
+- Damn, weak performance
