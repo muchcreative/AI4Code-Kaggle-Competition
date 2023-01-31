@@ -4,10 +4,6 @@ NLP Kaggle 3-Month Competition [Found Here](https://www.kaggle.com/competitions/
 
 Personal Model was a Triple Ensemble Model using 2x GraphCodeBert's and a XLM-Roberta-Base with random code cell sampling to create document embeddings. Built using Tensorflow to utilize TFRecords and TPU speed. Model is a subclassed structure that aims to combine cell and document embeddings to generate the correct order of the markdown cells.
 
-**Final Score:**
-- 86-87 Kendall Tau Score with peronsal test environment and dataset around 88-89
-- Winning scores ranged between 90-92 Kendall Tau
-
 **Ideas Tested:**
 1. Two-stage prediction model:
     - First stage would split the document into 4 parts (quadrants) and identify the quadrant that the markdown was located in
