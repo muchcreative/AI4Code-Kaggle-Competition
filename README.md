@@ -30,4 +30,4 @@ Personal Model was a Triple Ensemble Model using 2x GraphCodeBert's and a XLM-Ro
 - External dataset did not provide as much boost as I was hoping for as different time periods of notebook creations ended up adding noise to the main train dataset
 -  Wasn’t able to extract information from a markdown embedding due to FCL usage over attention layers
 -	Too much time was spent on EDA and post-language processing, NLPs seem to prefer better model structures and good feature representation over preprocessing techniques.
-- Damn, weak performance
+-	Alot of things to improve and work on. Happy with the result, but know I can perform better on the next NLP
